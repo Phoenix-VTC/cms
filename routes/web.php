@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/** @var Router $router */
+$router
+    ->get('/', [\App\Http\Controllers\HomeController::class, 'index'])
+    ->name('home');
+
+$router
+    ->get('/{locale}/{slug}', [\App\Http\Controllers\PageController::class, 'showPage'])
+    ->name('page.show');
