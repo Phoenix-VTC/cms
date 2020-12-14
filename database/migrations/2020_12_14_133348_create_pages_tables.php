@@ -12,6 +12,10 @@ class CreatePagesTables extends Migration
             createDefaultTableFields($table);
 
             $table->integer('position')->unsigned()->nullable();
+            $table->text('description')->nullable();
+            $table->text('header_text')->nullable();
+            $table->text('header_subtext')->nullable();
+            $table->string('template')->default('default');
 
             // add those 2 columns to enable publication timeframe fields (you can use publish_start_date only if you don't need to provide the ability to specify an end date)
              $table->timestamp('publish_start_date')->nullable();
@@ -22,6 +26,8 @@ class CreatePagesTables extends Migration
             createDefaultTranslationsTableFields($table, 'page');
             $table->string('title', 200)->nullable();
             $table->text('description')->nullable();
+            $table->text('header_text')->nullable();
+            $table->text('header_subtext')->nullable();
         });
 
         Schema::create('page_slugs', function (Blueprint $table) {
