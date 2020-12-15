@@ -8,7 +8,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <title>{{ $item->title }} - {{ config('app.name') }}</title>
 </head>
-<body>
+<body class="antialiased bg-body text-body font-body bg-gray-900">
 @yield('navigation')
 @yield('contents')
 @yield('footer')
