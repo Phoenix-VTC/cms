@@ -48,6 +48,9 @@ return [
             'statistics' => [
                 'component' => 'a17-block-statistics',
             ],
+            'cta' => [
+                'component' => 'a17-block-cta',
+            ],
         ],
         'repeaters' => [
             'statistic' => [
