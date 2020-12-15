@@ -50,12 +50,12 @@ return [
             ],
         ],
         'repeaters' => [
-//            'journey-step' => [
-//                'title' => 'Journey Step',
-//                'trigger' => 'Add journey step',
-//                'component' => 'a17-block-journey-step',
-//                'max' => 10,
-//            ],
+            'statistic' => [
+                'title' => 'Statistic',
+                'trigger' => 'Add statistic',
+                'component' => 'a17-block-statistic',
+                'max' => 10,
+            ],
         ],
         'crops' => [
             'image' => [
