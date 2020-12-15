@@ -12,17 +12,12 @@ return [
     'settings' => [
         'title' => 'Settings',
         'route' => 'admin.settings',
-        'params' => ['section' => 'blog'],
+        'params' => ['section' => 'socials'],
         'primary_navigation' => [
-            'settings' => [
-                'title' => 'Blog settings',
+            'socials' => [
+                'title' => 'Social media settings',
                 'route' => 'admin.settings',
-                'params' => ['section' => 'blog']
-            ],
-            'employees' => [
-                'title' => 'Employees settings',
-                'route' => 'admin.settings',
-                'params' => ['section' => 'employees']
+                'params' => ['section' => 'socials']
             ],
         ]
     ],

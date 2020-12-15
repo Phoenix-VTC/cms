@@ -34,6 +34,17 @@ return [
                     ],
                     'max_items' => 5,
                 ],
+                'footer_navigation' => [
+                    'name' => 'Footer navigation',
+                    'bucketables' => [
+                        [
+                            'module' => 'pages',
+                            'name' => 'pages',
+                            'scopes' => ['published' => true],
+                        ],
+                    ],
+                    'max_items' => 5,
+                ],
             ],
         ],
     ],
