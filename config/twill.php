@@ -42,11 +42,12 @@ return [
     ],
     'block_editor' => [
         'blocks' => [
-//            'text' => [
-//                'title' => 'Text',
-//                'icon' => 'text',
-//                'component' => 'a17-block-text',
-//            ],
+            'feature-card' => [
+                'component' => 'a17-block-feature-card',
+            ],
+            'statistics' => [
+                'component' => 'a17-block-statistics',
+            ],
         ],
         'repeaters' => [
 //            'journey-step' => [

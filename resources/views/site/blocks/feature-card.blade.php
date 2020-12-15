@@ -1,8 +1,8 @@
 <?php /** @var A17\Twill\Models\Block $block */ ?>
-<section class="pt-20 pb-20 lg:pb-12 overflow-x-hidden {{ $block->backgroundColor }}">
+<section class="pt-20 pb-20 lg:pb-12 overflow-x-hidden {{ "bg-" . $block->input('background_color') }}">
     <div class="flex flex-wrap">
         @if($block->input('image_position') === 'left')
-            <div class="relative w-full lg:w-1/2 px-4 lg:h-128" v-if="imagePosition === 'left'">
+            <div class="relative w-full lg:w-1/2 px-4 lg:h-128">
                 <div class="relative lg:absolute left-0 top-0 lg:max-w-6xl mx-auto lg:-ml-64">
                     @if($block->input('image_mockup'))
                         <img class="lg:h-128" src="{{ asset('assets/images/mockups/macbook.png') }}" alt="Macbook">
@@ -16,7 +16,7 @@
                     @endif
                 </div>
             </div>
-            <div class="flex w-full lg:w-1/2 lg:max-w-lg lg:h-128 px-4 lg:pl-16" v-if="imagePosition === 'left'">
+            <div class="flex w-full lg:w-1/2 lg:max-w-lg lg:h-128 px-4 lg:pl-16">
                 <div class="my-auto mx-auto pt-8 lg:pt-0 max-w-2xl lg:max-w-lg">
                     <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading text-white">
                         <span>{{ $block->translatedInput('title_first') }}</span>
@@ -31,8 +31,7 @@
                 </div>
             </div>
         @else
-            <div class="flex order-1 lg:order-0 w-full lg:w-1/2 lg:h-128 lg:max-w-lg lg:ml-auto px-4 lg:pr-24 xl:pr-4"
-                 v-if="imagePosition === 'right'">
+            <div class="flex order-1 lg:order-0 w-full lg:w-1/2 lg:h-128 lg:max-w-lg lg:ml-auto px-4 lg:pr-24 xl:pr-4">
                 <div class="my-auto mx-auto pt-8 lg:pt-0 max-w-2xl lg:max-w-lg">
                     <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading text-white">
                         <span>{{ $block->translatedInput('title_first') }}</span>
@@ -46,7 +45,7 @@
                        href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
                 </div>
             </div>
-            <div class="relative order-0 lg:order-1 w-full lg:w-1/2 px-4 lg:h-128" v-if="imagePosition === 'right'">
+            <div class="relative order-0 lg:order-1 w-full lg:w-1/2 px-4 lg:h-128">
                 <div class="relative lg:absolute right-0 top-0 lg:max-w-6xl mx-auto lg:-mr-64">
                     @if($block->input('image_mockup'))
                         <img class="lg:h-128" src="{{ asset('assets/images/mockups/macbook.png') }}" alt="Macbook">
