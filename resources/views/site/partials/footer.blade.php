@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="text-lg font-bold font-heading hover:text-blueGrany-600" href="{{ url("$locale/events") }}">
+                    <a class="text-lg font-bold font-heading hover:text-blueGray-600" href="{{ url("$locale/events") }}">
                         Events
                     </a>
                 </li>
@@ -61,6 +61,15 @@
                         <i class="fas fa-truck"></i>
                     </a>
                 @endif
+                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials'))
+                        <p class="my-4 text-xs text-blueGray-400">
+                            <span>Get in touch </span>
+                            <a class="text-primary hover:text-red-900 underline"
+                               href="mailto:{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials') }}">
+                                {{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials') }}
+                            </a>
+                        </p>
+                    @endif
             </div>
         </div>
     </div>

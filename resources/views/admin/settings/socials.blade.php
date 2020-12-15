@@ -2,6 +2,16 @@
 
 @section('contentFields')
     @formField('input', [
+        'label' => 'Support email',
+        'name' => 'support_email',
+    ])
+
+    @formField('input', [
+        'label' => 'Management email',
+        'name' => 'management_email',
+    ])
+
+    @formField('input', [
         'label' => 'Twitter URL',
         'name' => 'twitter_url',
     ])

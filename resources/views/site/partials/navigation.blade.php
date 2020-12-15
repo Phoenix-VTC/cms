@@ -106,25 +106,45 @@
                 </div>
             </div>
             <div class="mt-auto">
-                <p class="my-4 text-xs text-blueGray-400">
-                    <span>Get in touch </span>
-                    <a class="text-primary hover:text-red-900 underline" href="#">support@phoenixvtc.com</a>
-                </p>
-                <a class="inline-block px-2" href="#">
-                    <font-awesome-icon :icon="['fab', 'twitter']"/>
-                </a>
-                <a class="inline-block px-2" href="#">
-                    <font-awesome-icon :icon="['fab', 'facebook']"/>
-                </a>
-                <a class="inline-block px-2" href="#">
-                    <font-awesome-icon :icon="['fab', 'youtube']"/>
-                </a>
-                <a class="inline-block px-2" href="#">
-                    <font-awesome-icon :icon="['fab', 'instagram']"/>
-                </a>
-                <a class="inline-block px-2" href="#">
-                    <font-awesome-icon :icon="['fas', 'truck']"/>
-                </a>
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials'))
+                    <p class="my-4 text-xs text-blueGray-400">
+                        <span>Get in touch </span>
+                        <a class="text-primary hover:text-red-900 underline"
+                           href="mailto:{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials') }}">
+                            {{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials') }}
+                        </a>
+                    </p>
+                @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('twitter_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('twitter_url', 'socials') }}">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('facebook_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('facebook_url', 'socials') }}">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('youtube_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('youtube_url', 'socials') }}">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('instagram_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('instagram_url', 'socials') }}">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials') }}">
+                        <i class="fas fa-truck"></i>
+                    </a>
+                @endif
             </div>
         </nav>
     </div>
