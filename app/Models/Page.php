@@ -20,13 +20,21 @@ class Page extends Model implements Sortable
         'published',
         'title',
         'description',
-        'position',
+        'header_one',
+        'header_two',
+        'header_three',
+        'header_subtext',
+        'template'
     ];
 
     public $translatedAttributes = [
         'title',
         'description',
         'active',
+        'header_one',
+        'header_two',
+        'header_three',
+        'header_subtext'
     ];
 
     public $slugAttributes = [

@@ -9,8 +9,22 @@
     ])
 
     @formField('input', [
-        'name' => 'header_text',
-        'label' => 'Header text',
+        'name' => 'header_one',
+        'label' => 'Header one',
+        'translated' => true,
+        'maxlength' => 100
+    ])
+
+    @formField('input', [
+        'name' => 'header_two',
+        'label' => 'Header two',
+        'translated' => true,
+        'maxlength' => 100
+    ])
+
+    @formField('input', [
+        'name' => 'header_three',
+        'label' => 'Header three',
         'translated' => true,
         'maxlength' => 100
     ])
