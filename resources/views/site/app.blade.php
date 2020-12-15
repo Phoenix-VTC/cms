@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
-    <title>{{ config('app.name') }}</title>
+    <title>{{ $item->title }} - {{ config('app.name') }}</title>
 </head>
 <body>
 @yield('navigation')
