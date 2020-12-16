@@ -18,7 +18,12 @@ class CreatePagesTables extends Migration
             $table->text('header_three')->nullable();
             $table->text('header_subtext')->nullable();
             $table->string('template')->default('default');
+            $table->boolean('show_logos')->default(false);
             $table->string('header_title_size')->default('4xl');
+            $table->string('button_1_label')->nullable();
+            $table->string('button_1_url')->nullable();
+            $table->string('button_2_label')->nullable();
+            $table->string('button_2_url')->nullable();
 
             // add those 2 columns to enable publication timeframe fields (you can use publish_start_date only if you don't need to provide the ability to specify an end date)
             $table->timestamp('publish_start_date')->nullable();
@@ -33,6 +38,8 @@ class CreatePagesTables extends Migration
             $table->text('header_two')->nullable();
             $table->text('header_three')->nullable();
             $table->text('header_subtext')->nullable();
+            $table->string('button_1_label')->nullable();
+            $table->string('button_2_label')->nullable();
         });
 
         Schema::create('page_slugs', function (Blueprint $table) {
