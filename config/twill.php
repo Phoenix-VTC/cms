@@ -68,6 +68,9 @@ return [
             'testimonial' => [
                 'component' => 'a17-block-testimonial',
             ],
+            'partners' => [
+                'component' => 'a17-block-partners',
+            ],
         ],
         'repeaters' => [
             'statistic' => [
@@ -75,6 +78,11 @@ return [
                 'trigger' => 'Add statistic',
                 'component' => 'a17-block-statistic',
                 'max' => 10,
+            ],
+            'partner' => [
+                'title' => 'Partner',
+                'trigger' => 'Add partner',
+                'component' => 'a17-block-partner',
             ],
         ],
         'crops' => [
