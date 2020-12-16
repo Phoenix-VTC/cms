@@ -62,6 +62,9 @@ return [
             'cta' => [
                 'component' => 'a17-block-cta',
             ],
+            'text' => [
+                'component' => 'a17-block-text',
+            ],
             'testimonial' => [
                 'component' => 'a17-block-testimonial',
             ],
