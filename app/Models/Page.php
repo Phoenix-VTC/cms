@@ -24,7 +24,13 @@ class Page extends Model implements Sortable
         'header_two',
         'header_three',
         'header_subtext',
-        'template'
+        'template',
+        'show_logos',
+        'header_title_size',
+        'button_1_label',
+        'button_1_url',
+        'button_2_label',
+        'button_2_url'
     ];
 
     public $translatedAttributes = [
@@ -34,7 +40,9 @@ class Page extends Model implements Sortable
         'header_one',
         'header_two',
         'header_three',
-        'header_subtext'
+        'header_subtext',
+        'button_1_label',
+        'button_2_label',
     ];
 
     public $slugAttributes = [

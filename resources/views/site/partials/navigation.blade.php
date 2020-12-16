@@ -39,7 +39,7 @@
         </nav>
         <div class="py-12 text-center">
             <div class="max-w-lg mx-auto mb-8">
-                <h2 class="text-3xl mb-4 text-white font-bold font-heading" :class="'md:text-' + titleSize">
+                <h2 class="text-3xl mb-4 text-white font-bold font-heading {{ "md:text-" . $item->header_title_size }}">
                     <span>{{ $item->header_one }}</span>
                     <span class="text-primary">{{ $item->header_two }}</span>
                     <span>{{ $item->header_three }}</span>
@@ -49,19 +49,35 @@
                 </p>
             </div>
             <div>
-                <slot></slot>
+                @if($item->button_1_label)
+                    <a
+                        class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-primary hover:bg-red-900 rounded"
+                        href="{{ $item->button_1_url }}">
+                        {{ $item->button_1_label }}
+                    </a>
+                @endif
+                @if($item->button_2_label)
+                    <a
+                        class="block sm:inline-block py-4 px-8 text-xs text-white hover:text-gray-200 text-center font-semibold leading-none border border-gray-200 hover:border-gray-300 rounded"
+                        href="{{ $item->button_2_url }}">
+                        {{ $item->button_2_label }}
+                    </a>
+                @endif
             </div>
         </div>
-        <div class="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-192" v-if="showLogos">
-            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                <img class="mx-auto" v-lazy="ets" alt="">
-            </div>
-            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                <img class="mx-auto" v-lazy="tmp" alt="">
-            </div>
-            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                <img class="mx-auto" v-lazy="ats" alt="">
-            </div>
+
+        <div class="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-192">
+            @if($item->show_logos)
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
+                    <img class="mx-auto" src="{{ asset('assets/images/ets2.png') }}" alt="Euro Truck Simulator 2">
+                </div>
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
+                    <img class="mx-auto" src="{{ asset('assets/images/tmp.png') }}" alt="TruckersMP">
+                </div>
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
+                    <img class="mx-auto" src="{{ asset('assets/images/ats.png') }}" alt="American Truck Simulator">
+                </div>
+            @endif
         </div>
     </div>
     <div class="hidden navbar-menu relative z-50">
@@ -93,15 +109,15 @@
                     @endforeach
                 </ul>
                 <div class="mt-4 pt-6 border-t border-blueGray-100">
-                    <router-link
+                    <a
                         class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-primary hover:bg-red-900 text-white rounded"
-                        :to="{ name: 'Apply' }">
+                        href="#">
                         Join Phoenix
-                    </router-link>
+                    </a>
                     <a
                         class="block px-4 py-3 mb-2 text-xs text-center text-primary hover:text-red-900 font-semibold leading-none border hover:border-red-900 rounded"
                         href="#">
-                        DriversHub
+                        Member Access
                     </a>
                 </div>
             </div>

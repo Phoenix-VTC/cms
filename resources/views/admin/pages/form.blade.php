@@ -55,9 +55,40 @@
 
     @formField('medias', [
         'name' => 'header_image',
-        'label' => 'Cover image',
-        'note' => 'Also used in listings',
-        'fieldNote' => 'Minimum image width: 1500px'
+        'label' => 'Header image'
+    ])
+
+    @formField('checkbox', [
+        'name' => 'show_logos',
+        'label' => 'Show logos',
+        'default' => false
+    ])
+
+    @formField('input', [
+        'name' => 'header_title_size',
+        'label' => 'Header size'
+    ])
+
+    @formField('input', [
+        'name' => 'button_1_label',
+        'label' => 'Button one label',
+        'translated' => true
+    ])
+
+    @formField('input', [
+        'name' => 'button_1_url',
+        'label' => 'Button one URL'
+    ])
+
+    @formField('input', [
+        'name' => 'button_2_label',
+        'label' => 'Button two label',
+        'translated' => true
+    ])
+
+    @formField('input', [
+        'name' => 'button_2_url',
+        'label' => 'Button two URL'
     ])
 
     @formField('block_editor')
