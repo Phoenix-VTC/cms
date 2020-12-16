@@ -1,3 +1,5 @@
+<?php /** @var A17\Twill\Models\Block $block */ ?>
+
 <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
     <div class="p-8 text-center shadow rounded">
         <svg class="w-12 h-12 mx-auto mb-2 text-primary" xmlns="http://www.w3.org/2000/svg"

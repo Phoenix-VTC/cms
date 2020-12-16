@@ -1,3 +1,5 @@
+<?php /** @var A17\Twill\Models\Block $block */ ?>
+
 <section class="pt-20 pb-24 {{ "bg-" . $block->input('background_color') }}">
     <div class="container px-4 mx-auto">
         <div class="max-w-xl mx-auto text-center">

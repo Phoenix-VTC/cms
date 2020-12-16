@@ -1,4 +1,5 @@
 <?php /** @var A17\Twill\Models\Block $block */ ?>
+
 <section class="pt-20 pb-20 lg:pb-12 overflow-x-hidden {{ "bg-" . $block->input('background_color') }}">
     <div class="flex flex-wrap">
         @if($block->input('image_position') === 'left')
