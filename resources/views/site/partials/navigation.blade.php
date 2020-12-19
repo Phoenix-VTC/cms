@@ -2,7 +2,7 @@
          style="background-image: url({{ asset($item->image('header_image')) }}); background-position: 20% 20%;">
     <div class="container px-4 mx-auto">
         <nav class="flex justify-between items-center py-6">
-            <a class="text-3xl text-white font-semibold leading-none" href="#">
+            <a class="text-3xl text-white font-semibold leading-none" href="{{ route('home') }}">
                 <img src="{{ asset('assets/images/branding/logo.png') }}" alt="Phoenix" width="50">
             </a>
             <div class="lg:hidden">
@@ -85,7 +85,7 @@
         <nav
             class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
             <div class="flex items-center mb-8">
-                <a class="mr-auto text-3xl font-semibold leading-none" href="#">
+                <a class="mr-auto text-3xl font-semibold leading-none" href="{{ route('home') }}">
                     <h1 class="font-bold">{{ config('app.name') }}</h1>
                 </a>
                 <button class="navbar-close">
