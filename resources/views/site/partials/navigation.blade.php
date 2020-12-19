@@ -3,7 +3,7 @@
     <div class="container px-4 mx-auto">
         <nav class="flex justify-between items-center py-6">
             <a class="text-3xl text-white font-semibold leading-none" href="#">
-                <img src="{{ asset('assets/images/branding/logo.svg') }}" alt="Phoenix" width="100">
+                <img src="{{ asset('assets/images/branding/logo.png') }}" alt="Phoenix" width="50">
             </a>
             <div class="lg:hidden">
                 <button

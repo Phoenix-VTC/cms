@@ -3,7 +3,7 @@
         <div class="flex flex-col lg:flex-row mb-10">
             <a class="inline-block mx-auto mb-10 lg:mb-0 lg:ml-0 lg:mr-auto text-3xl font-semibold leading-none"
                href="#">
-                <img class="h-10" src="{{ asset('assets/images/branding/logo.svg') }}" alt="Phoenix">
+                <img class="h-10" src="{{ asset('assets/images/branding/logo.png') }}" alt="Phoenix">
             </a>
             <ul class="flex lg:flex-row items-center justify-center space-x-12 text-gray-200">
                 <li>
