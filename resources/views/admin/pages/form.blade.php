@@ -50,7 +50,7 @@
                 'value' => 'contact',
                 'label' => 'Contact'
             ]
-    ]
+        ]
     ])
 
     @formField('medias', [
