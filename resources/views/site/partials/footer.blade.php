@@ -34,37 +34,37 @@
             <p class="text-xs text-gray-200">© {{ date("Y") }} Phoenix VTC. All rights reserved.</p>
             <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0 text-gray-200">
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('twitter_url', 'socials'))
-                    <a class="inline-block px-2"
+                    <a class="inline-block px-2" target="_blank"
                        href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('twitter_url', 'socials') }}">
                         <i class="fab fa-twitter"></i>
                     </a>
                 @endif
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('facebook_url', 'socials'))
-                    <a class="inline-block px-2"
+                    <a class="inline-block px-2" target="_blank"
                        href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('facebook_url', 'socials') }}">
                         <i class="fab fa-facebook"></i>
                     </a>
                 @endif
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('youtube_url', 'socials'))
-                    <a class="inline-block px-2"
+                    <a class="inline-block px-2" target="_blank"
                        href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('youtube_url', 'socials') }}">
                         <i class="fab fa-youtube"></i>
                     </a>
                 @endif
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('instagram_url', 'socials'))
-                    <a class="inline-block px-2"
+                    <a class="inline-block px-2" target="_blank"
                        href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('instagram_url', 'socials') }}">
                         <i class="fab fa-instagram"></i>
                     </a>
                 @endif
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials'))
-                    <a class="inline-block px-2"
+                    <a class="inline-block px-2" target="_blank"
                        href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials') }}">
                         <i class="fas fa-truck"></i>
                     </a>
                 @endif
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials'))
-                    <a class="inline-block px-2"
+                    <a class="inline-block px-2" target="_blank"
                        href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials') }}">
                         <i class="fab fa-discord"></i>
                     </a>
