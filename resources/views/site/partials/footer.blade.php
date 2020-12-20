@@ -63,6 +63,12 @@
                         <i class="fas fa-truck"></i>
                     </a>
                 @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials') }}">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                @endif
                 @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials'))
                     <p class="my-4 text-xs text-blueGray-400">
                         <span>Get in touch </span>

@@ -161,6 +161,12 @@
                         <i class="fas fa-truck"></i>
                     </a>
                 @endif
+                @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials'))
+                    <a class="inline-block px-2"
+                       href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials') }}">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                @endif
             </div>
         </nav>
     </div>
