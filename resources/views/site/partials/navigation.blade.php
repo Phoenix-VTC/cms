@@ -43,6 +43,9 @@
                     <span>{{ $item->header_one }}</span>
                     <span class="text-primary">{{ $item->header_two }}</span>
                     <span>{{ $item->header_three }}</span>
+                    @if($item->template === 'opening_countdown')
+                        <span id="countdown"></span>
+                    @endif
                 </h2>
                 <p class="text-white leading-relaxed">
                     {{ $item->header_subtext }}
@@ -171,3 +174,26 @@
         </nav>
     </div>
 </section>
+
+@if($item->template === 'opening_countdown')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+            integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"
+            integrity="sha512-YfIXbIiAfl/i9LO4PUETYxh72veiVE9ixWItTOx267LiYsWVAHuTO13jEwiEFAHrBtH87a47+sehqUMX3L3i2w=="
+            crossorigin="anonymous"></script>
+
+    <script>
+        const opening = moment.tz("2021-01-09 12:00", "GMT");
+
+        $('#countdown').countdown(opening.toDate(), function (event) {
+            $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+        });
+    </script>
+@endif

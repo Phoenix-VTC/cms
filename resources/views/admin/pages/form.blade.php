@@ -49,6 +49,10 @@
             [
                 'value' => 'contact',
                 'label' => 'Contact'
+            ],
+            [
+                'value' => 'opening_countdown',
+                'label' => 'Opening Countdown',
             ]
         ]
     ])
