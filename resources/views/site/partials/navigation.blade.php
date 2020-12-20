@@ -43,8 +43,9 @@
                     <span>{{ $item->header_one }}</span>
                     <span class="text-primary">{{ $item->header_two }}</span>
                     <span>{{ $item->header_three }}</span>
+                    <br>
                     @if($item->template === 'opening_countdown')
-                        <span id="countdown"></span>
+                        <span class="md:text-6xl" id="countdown"></span>
                     @endif
                 </h2>
                 <p class="text-white leading-relaxed">
