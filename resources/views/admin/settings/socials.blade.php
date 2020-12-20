@@ -35,4 +35,10 @@
         'label' => 'TruckersMP URL',
         'name' => 'truckersmp_url',
     ])
+
+    @formField('input', [
+        'label' => 'Discord URL',
+        'name' => 'discord_url',
+    ])
+
 @stop
