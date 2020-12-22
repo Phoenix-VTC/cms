@@ -5,6 +5,10 @@ return [
         'title' => 'Pages',
         'module' => true
     ],
+    'employees' => [
+        'title' => 'Employees',
+        'module' => true
+    ],
     'navigation' => [
         'title' => 'Navigation',
         'route' => 'admin.navigation.main',

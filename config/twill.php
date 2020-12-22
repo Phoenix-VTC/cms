@@ -71,6 +71,9 @@ return [
             'partners' => [
                 'component' => 'a17-block-partners',
             ],
+            'employees' => [
+                'component' => 'a17-block-employees',
+            ],
         ],
         'repeaters' => [
             'statistic' => [

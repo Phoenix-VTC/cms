@@ -70,7 +70,8 @@
 
     @formField('input', [
         'name' => 'header_title_size',
-        'label' => 'Header size'
+        'label' => 'Header size',
+        'default' => '4xl'
     ])
 
     @formField('input', [
