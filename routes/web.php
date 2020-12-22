@@ -21,3 +21,7 @@ $router
 $router
     ->get('/{locale}/{slug}', [\App\Http\Controllers\PageController::class, 'showPage'])
     ->name('page.show');
+
+$router
+    ->get('/{locale}/team/{slug}', [\App\Http\Controllers\EmployeeController::class, 'showPage'])
+    ->name('employee.show');
