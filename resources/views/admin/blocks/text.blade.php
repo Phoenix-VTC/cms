@@ -20,6 +20,7 @@
         [ 'script' => 'super' ],
         [ 'script' => 'sub' ],
         'link',
+        'image',
         'clean'
     ],
     'translated' => true
