@@ -9,23 +9,26 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <title>{{ $item->title }} - {{ config('app.name') }}</title>
 
+@if(\Request::hasCookie('phoenix_cookie_consent'))
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R59FJ1SJVV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R59FJ1SJVV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
+            gtag('js', new Date());
 
-        gtag('config', 'G-R59FJ1SJVV');
-    </script>
+            gtag('config', 'G-R59FJ1SJVV');
+        </script>
+    @endif
 </head>
 <body class="antialiased bg-body text-body font-body bg-gray-900">
 @yield('navigation')
 @yield('contents')
 @yield('footer')
+@include('cookieConsent::index')
 </body>
 </html>
