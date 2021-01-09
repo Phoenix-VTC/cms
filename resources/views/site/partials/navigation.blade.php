@@ -27,12 +27,12 @@
             <div class="hidden lg:block">
                 <a
                     class="mr-2 inline-block px-4 py-3 text-xs text-white hover:text-gray-200 font-semibold leading-none border border-gray-200 hover:border-gray-300 rounded"
-                    href="#">
+                    href="https://base.phoenixvtc.com">
                     Member Access
                 </a>
                 <a
                     class="inline-block px-4 py-3 text-xs font-semibold leading-none bg-primary hover:bg-red-900 text-white rounded"
-                    href="#">
+                    href="https://apply.phoenixvtc.com">
                     Join Phoenix
                 </a>
             </div>
@@ -115,12 +115,12 @@
                 <div class="mt-4 pt-6 border-t border-blueGray-100">
                     <a
                         class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-primary hover:bg-red-900 text-white rounded"
-                        href="#">
+                        href="https://apply.phoenixvtc.com">
                         Join Phoenix
                     </a>
                     <a
                         class="block px-4 py-3 mb-2 text-xs text-center text-primary hover:text-red-900 font-semibold leading-none border hover:border-red-900 rounded"
-                        href="#">
+                        href="https://base.phoenixvtc.com">
                         Member Access
                     </a>
                 </div>
