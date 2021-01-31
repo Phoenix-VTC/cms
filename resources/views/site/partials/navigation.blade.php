@@ -76,9 +76,6 @@
                     <img class="mx-auto" src="{{ asset('assets/images/ets2.png') }}" alt="Euro Truck Simulator 2">
                 </div>
                 <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                    <img class="mx-auto" src="{{ asset('assets/images/tmp.png') }}" alt="TruckersMP">
-                </div>
-                <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
                     <img class="mx-auto" src="{{ asset('assets/images/ats.png') }}" alt="American Truck Simulator">
                 </div>
             @endif
