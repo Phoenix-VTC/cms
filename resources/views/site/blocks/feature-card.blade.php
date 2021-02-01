@@ -27,8 +27,10 @@
                     <div class="text-gray-400 leading-loose mb-6">
                         {!! $block->translatedInput('text') !!}
                     </div>
-                    <a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-primary hover:bg-red-900 rounded"
-                       href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                    @if($block->input('button_label'))
+                        <a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-primary hover:bg-red-900 rounded"
+                           href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                    @endif
                 </div>
             </div>
         @else
@@ -42,8 +44,10 @@
                     <div class="text-gray-400 leading-loose mb-6">
                         {!! $block->translatedInput('text') !!}
                     </div>
-                    <a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-primary hover:bg-red-900 rounded"
-                       href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                    @if($block->input('button_label'))
+                        <a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-primary hover:bg-red-900 rounded"
+                           href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                    @endif
                 </div>
             </div>
             <div class="relative order-0 lg:order-1 w-full lg:w-1/2 px-4 lg:h-128">
