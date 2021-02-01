@@ -27,7 +27,7 @@
     <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
     {{-- Google Analytics --}}
-    @if(\Request::hasCookie('phoenix_cookie_consent'))
+    @if(Request::hasCookie('phoenix_cookie_consent'))
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R59FJ1SJVV"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
