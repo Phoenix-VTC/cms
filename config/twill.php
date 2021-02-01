@@ -74,6 +74,9 @@ return [
             'employees' => [
                 'component' => 'a17-block-employees',
             ],
+            'accordions' => [
+                'component' => 'a17-block-accordions',
+            ],
         ],
         'repeaters' => [
             'statistic' => [
@@ -86,6 +89,11 @@ return [
                 'title' => 'Partner',
                 'trigger' => 'Add partner',
                 'component' => 'a17-block-partner',
+            ],
+            'accordion' => [
+                'title' => 'Accordion',
+                'trigger' => 'Add accordion',
+                'component' => 'a17-block-accordion',
             ],
         ],
         'crops' => [
