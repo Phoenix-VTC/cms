@@ -22,6 +22,25 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
     <meta name="theme-color" content="#18181B">
+    {{-- Open Graph / Facebook Meta Tags --}}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ route('home') }}">
+    <meta property="og:title" content="{{ $item->title }} - {{ config('app.name') }}">
+    <meta property="og:description"
+          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image"
+          content="{{ asset($item->image('header_image')) }}">
+    {{-- Twitter Meta Tags --}}
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ route('home') }}">
+    <meta property="twitter:title" content="{{ $item->title }} - {{ config('app.name') }}">
+    <meta property="twitter:description"
+          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+    <meta property="twitter:site" content="@PhoenixVTC">
+    <meta property="twitter:creator" content="@PhoenixVTC">
+    <meta property="twitter:image"
+          content="{{ asset($item->image('header_image')) }}">
     {{-- Stylesheets and Scripts --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
