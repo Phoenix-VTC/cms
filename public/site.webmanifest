@@ -1,6 +1,11 @@
 {
     "name": "Phoenix",
     "short_name": "Phoenix",
+    "description": "Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!",
+    "categories": ["games"],
+    "dir": "auto",
+    "lang": "en-GB",
+    "start_url": "https://phoenixvtc.com",
     "icons": [
         {
             "src": "/assets/images/branding/favicons/android-chrome-192x192.png",
