@@ -1,3 +1,5 @@
+import 'alpinejs';
+
 // Burger menus
 window.addEventListener("load", function (event) {
     // open
