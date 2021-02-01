@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    {{-- Primary Meta Tags --}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ $item->title }} - {{ config('app.name') }}</title>
+    <meta name="title" content="{{ $item->title }} - {{ config('app.name') }}">
+    <meta name="description"
+          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180"
           href="{{ asset('assets/images/branding/favicons/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -15,13 +22,31 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
     <meta name="theme-color" content="#18181B">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- Open Graph / Facebook Meta Tags --}}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ route('home') }}">
+    <meta property="og:title" content="{{ $item->title }} - {{ config('app.name') }}">
+    <meta property="og:description"
+          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image"
+          content="{{ asset($item->image('header_image')) }}">
+    {{-- Twitter Meta Tags --}}
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ route('home') }}">
+    <meta property="twitter:title" content="{{ $item->title }} - {{ config('app.name') }}">
+    <meta property="twitter:description"
+          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+    <meta property="twitter:site" content="@PhoenixVTC">
+    <meta property="twitter:creator" content="@PhoenixVTC">
+    <meta property="twitter:image"
+          content="{{ asset($item->image('header_image')) }}">
+    {{-- Stylesheets and Scripts --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
-    <title>{{ $item->title }} - {{ config('app.name') }}</title>
-
-    @if(\Request::hasCookie('phoenix_cookie_consent'))
+    {{-- Google Analytics --}}
+    @if(Request::hasCookie('phoenix_cookie_consent'))
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R59FJ1SJVV"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
