@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
     <meta name="theme-color" content="#18181B">
-    {{-- Stylesheets --}}
+    {{-- Stylesheets and Scripts --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
