@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/branding/favicons/favicon.ico') }}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#18181B">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
