@@ -12,7 +12,7 @@
                                  alt="{{ $block->imageAltText('image') }}">
                         </div>
                     @else
-                        <img class="object-cover w-full h-full" src="{{ asset($block->image('image')) }}"
+                        <img class="object-cover w-full h-full rounded-md" src="{{ asset($block->image('image')) }}"
                              alt="{{ $block->imageAltText('image') }}">
                     @endif
                 </div>
@@ -59,7 +59,7 @@
                                  alt="{{ $block->imageAltText('image') }}">
                         </div>
                     @else
-                        <img class="object-cover w-full h-full" src="{{ asset($block->image('image')) }}"
+                        <img class="object-cover w-full h-full rounded-md" src="{{ asset($block->image('image')) }}"
                              alt="{{ $block->imageAltText('image') }}">
                     @endif
                 </div>
