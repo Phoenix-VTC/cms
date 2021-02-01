@@ -41,4 +41,9 @@
         'name' => 'discord_url',
     ])
 
+    @formField('input', [
+        'label' => 'Steam URL',
+        'name' => 'steam_url',
+    ])
+
 @stop

@@ -38,6 +38,12 @@
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
                     @endif
+                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('steam_url', 'socials'))
+                        <a class="text-gray-400 hover:text-gray-300" target="_blank"
+                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('steam_url', 'socials') }}">
+                            <i class="fab fa-steam text-xl"></i>
+                        </a>
+                    @endif
                     @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials'))
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
                            href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials') }}">

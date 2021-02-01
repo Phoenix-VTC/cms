@@ -74,6 +74,12 @@ return [
             'employees' => [
                 'component' => 'a17-block-employees',
             ],
+            'accordions' => [
+                'component' => 'a17-block-accordions',
+            ],
+            'journey' => [
+                'component' => 'a17-block-journey',
+            ],
         ],
         'repeaters' => [
             'statistic' => [
@@ -86,6 +92,16 @@ return [
                 'title' => 'Partner',
                 'trigger' => 'Add partner',
                 'component' => 'a17-block-partner',
+            ],
+            'accordion' => [
+                'title' => 'Accordion',
+                'trigger' => 'Add accordion',
+                'component' => 'a17-block-accordion',
+            ],
+            'journey-step' => [
+                'title' => 'Journey Step',
+                'trigger' => 'Add journey step',
+                'component' => 'a17-block-journey-step',
             ],
         ],
         'crops' => [
