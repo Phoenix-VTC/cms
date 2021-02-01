@@ -3,7 +3,7 @@
 <section class="py-20 pb-8 overflow-x-hidden">
     <div class="container px-4 mx-auto">
         <h1 class="my-3 pb-8 text-3xl md:text-5xl text-white font-bold font-heading text-center">
-            {{ $block->input('title') }}
+            {{ $block->translatedInput('title') }}
         </h1>
         <div class="flex flex-wrap items-center justify-center">
             @foreach($block->children as $block)
