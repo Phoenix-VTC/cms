@@ -87,9 +87,9 @@
             <nav @click.away="openNav = false"
                 class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
-                    <a class="mr-auto text-3xl font-semibold leading-none" href="{{ route('home') }}">
+                    <div class="mr-auto text-3xl font-semibold leading-none">
                         <h1 class="font-bold">{{ config('app.name') }}</h1>
-                    </a>
+                    </div>
                     <button @click="openNav = false">
                         <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
