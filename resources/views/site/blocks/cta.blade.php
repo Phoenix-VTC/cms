@@ -4,7 +4,7 @@
     <div class="container px-4 mx-auto">
         <div class="max-w-xl mx-auto text-center">
             @if($block->translatedInput('label'))
-                <span class="inline-block text-xs py-1 px-3 bg-blue-500 text-white font-semibold rounded-xl">
+                <span class="inline-block py-1 px-3 text-xs font-semibold bg-secondary text-white rounded-xl">
                     {{ $block->translatedInput('label') }}
                 </span>
             @endif
