@@ -1,11 +1,13 @@
 <?php /** @var A17\Twill\Models\Block $block */ ?>
 
-<section class="py-20">
+<section class="py-20 {{ "bg-" . $block->input('background_color') }}">
     <div class="container px-4 mx-auto">
         <div class="max-w-lg mx-auto mb-16 text-center">
-            <span class="inline-block py-1 px-3 text-xs font-semibold bg-secondary text-white rounded-xl">
-                {{ $block->translatedInput('label') }}
-            </span>
+            @if($block->input('label'))
+                <span class="inline-block py-1 px-3 text-xs font-semibold bg-secondary text-white rounded-xl">
+                    {{ $block->translatedInput('label') }}
+                </span>
+            @endif
             <h2 class="mt-4 mb-2 text-3xl lg:text-4xl font-bold font-heading text-white">
                 <span>{{ $block->translatedInput('title') }}</span>
             </h2>
