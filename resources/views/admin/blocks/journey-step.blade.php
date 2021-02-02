@@ -3,9 +3,8 @@
 @twillBlockGroup('app')
 
 @formField('input', [
-    'name' => 'title',
-    'label' => 'Title',
-    'translated' => true,
+    'name' => 'icon',
+    'label' => 'Icon',
 ])
 
 @formField('input', [
