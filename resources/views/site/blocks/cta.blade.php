@@ -13,8 +13,10 @@
                 {!! $block->translatedInput('text') !!}
             </div>
             <div class="mt-10">
-                <a class="inline-block py-4 px-8 text-xs text-primary font-semibold leading-none bg-white hover:red-900 hover:text-white border hover:border-white rounded transition duration-300"
-                   href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                @if($block->input('button_label'))
+                    <a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-red-700 hover:bg-red-600 rounded"
+                       href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                @endif
             </div>
         </div>
     </div>
