@@ -25,3 +25,8 @@
     ],
     'translated' => true
 ])
+
+@formField('input', [
+    'name' => 'background_color',
+    'label' => 'Background color',
+])
