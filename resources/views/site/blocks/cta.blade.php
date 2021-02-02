@@ -4,7 +4,7 @@
     <div class="container px-4 mx-auto">
         <div class="max-w-xl mx-auto text-center">
             @if($block->translatedInput('label'))
-                <span class="inline-block text-xs py-1 px-3 bg-blue-500 text-white font-semibold rounded-xl">
+                <span class="inline-block py-1 px-3 text-xs font-semibold bg-secondary text-white rounded-xl">
                     {{ $block->translatedInput('label') }}
                 </span>
             @endif
@@ -13,8 +13,10 @@
                 {!! $block->translatedInput('text') !!}
             </div>
             <div class="mt-10">
-                <a class="inline-block py-4 px-8 text-xs text-primary font-semibold leading-none bg-white hover:red-900 hover:text-white border hover:border-white rounded transition duration-300"
-                   href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                @if($block->input('button_label'))
+                    <a class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-red-700 hover:bg-red-600 rounded"
+                       href="{{ $block->input('button_url') }}">{{ $block->translatedInput('button_label') }}</a>
+                @endif
             </div>
         </div>
     </div>

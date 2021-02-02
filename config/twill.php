@@ -32,7 +32,7 @@ return [
                             'scopes' => ['published' => true],
                         ],
                     ],
-                    'max_items' => 5,
+                    'max_items' => 8,
                 ],
                 'footer_navigation' => [
                     'name' => 'Footer navigation',

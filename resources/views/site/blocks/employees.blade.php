@@ -1,6 +1,6 @@
 <?php /** @var A17\Twill\Models\Block $block */ ?>
 
-<section class="py-20 text-white">
+<section class="py-20 text-white {{ "bg-" . $block->input('background_color') }}">
     <div class="container px-4 mx-auto text-center">
         <div class="max-w-lg mx-auto mb-16">
             @if($block->translatedInput('label'))
