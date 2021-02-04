@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use A17\Twill\Models\Behaviors\HasBlocks;
+use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
@@ -16,6 +17,7 @@ class Blog extends Model
     use HasSlug;
     use HasMedias;
     use HasRevisions;
+    use HasPosition;
 
     protected $fillable = [
         'published',
