@@ -19,6 +19,14 @@ $router
     ->name('home');
 
 $router
+    ->get('/{locale}/blog', [\App\Http\Controllers\BlogController::class, 'showOverview'])
+    ->name('blog.overview');
+
+$router
+    ->get('/{locale}/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'showPage'])
+    ->name('blog.show');
+
+$router
     ->get('/{locale}/{slug}', [\App\Http\Controllers\PageController::class, 'showPage'])
     ->name('page.show');
 
