@@ -1,7 +1,7 @@
 @extends('site.app')
 
 @section('navigation')
-    @include('site.partials.navigation')
+    @include('site.partials.navigation', ['enableHeader' => false])
 @endsection
 
 @section('contents')
