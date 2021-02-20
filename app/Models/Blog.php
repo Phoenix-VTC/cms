@@ -24,6 +24,7 @@ class Blog extends Model
         'title',
         'description',
         'author',
+        'created_at',
     ];
 
     public $translatedAttributes = [

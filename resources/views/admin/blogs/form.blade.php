@@ -25,5 +25,10 @@
         'translated' => true
     ])
 
+    @formField('date_picker', [
+        'name' => 'created_at',
+        'label' => 'Created at'
+    ])
+
     @formField('block_editor')
 @stop
