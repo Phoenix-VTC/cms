@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Employee;
 use App\Models\Page;
 use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,5 +31,7 @@ class AppServiceProvider extends ServiceProvider
             'pages' => Page::class,
             'employees' => Employee::class,
         ]);
+
+        Paginator::defaultView('site.partials.pagination');
     }
 }

@@ -1,11 +1,11 @@
 @extends('site.app')
 
 @section('navigation')
-    @include('site.partials.navigation', ['enableHeader' => $item->enable_header ?? true])
+    @include('site.partials.navigation', ['enableHeader' => false])
 @endsection
 
 @section('contents')
-    @include("site.modules.page.{$item->template}")
+    @include("site.modules.blog")
 @endsection
 
 @section('footer')

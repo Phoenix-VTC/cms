@@ -42,6 +42,7 @@
     <meta property="twitter:image"
           content="{{ asset($item->image('header_image')) }}">
     {{-- Stylesheets and Scripts --}}
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>

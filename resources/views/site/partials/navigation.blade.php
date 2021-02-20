@@ -38,54 +38,58 @@
                     </a>
                 </div>
             </nav>
-            <div class="py-12 text-center">
-                <div class="max-w-lg mx-auto mb-8">
-                    <h2 class="text-3xl mb-4 text-white font-bold font-heading {{ "md:text-" . $item->header_title_size }}">
-                        <span>{{ $item->header_one }}</span>
-                        <span class="text-primary">{{ $item->header_two }}</span>
-                        <span>{{ $item->header_three }}</span>
-                        <br>
-                        @if($item->template === 'opening_countdown')
-                            <span class="md:text-6xl" id="countdown"></span>
+            @if($enableHeader ?? true)
+                <div class="py-12 text-center">
+                    <div class="max-w-lg mx-auto mb-8">
+                        <h2 class="text-3xl mb-4 text-white font-bold font-heading {{ "md:text-" . $item->header_title_size }}">
+                            <span>{{ $item->header_one }}</span>
+                            <span class="text-primary">{{ $item->header_two }}</span>
+                            <span>{{ $item->header_three }}</span>
+                            <br>
+                            @if($item->template === 'opening_countdown')
+                                <span class="md:text-6xl" id="countdown"></span>
+                            @endif
+                        </h2>
+                        <p class="text-white leading-relaxed">
+                            {{ $item->header_subtext }}
+                        </p>
+                    </div>
+                    <div>
+                        @if($item->button_1_label)
+                            <a
+                                class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-primary hover:bg-red-900 rounded"
+                                href="{{ $item->button_1_url }}">
+                                {{ $item->button_1_label }}
+                            </a>
                         @endif
-                    </h2>
-                    <p class="text-white leading-relaxed">
-                        {{ $item->header_subtext }}
-                    </p>
+                        @if($item->button_2_label)
+                            <a
+                                class="block sm:inline-block py-4 px-8 text-xs text-white hover:text-gray-200 text-center font-semibold leading-none border border-gray-200 hover:border-gray-300 rounded"
+                                href="{{ $item->button_2_url }}">
+                                {{ $item->button_2_label }}
+                            </a>
+                        @endif
+                    </div>
                 </div>
-                <div>
-                    @if($item->button_1_label)
-                        <a
-                            class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-primary hover:bg-red-900 rounded"
-                            href="{{ $item->button_1_url }}">
-                            {{ $item->button_1_label }}
-                        </a>
-                    @endif
-                    @if($item->button_2_label)
-                        <a
-                            class="block sm:inline-block py-4 px-8 text-xs text-white hover:text-gray-200 text-center font-semibold leading-none border border-gray-200 hover:border-gray-300 rounded"
-                            href="{{ $item->button_2_url }}">
-                            {{ $item->button_2_label }}
-                        </a>
-                    @endif
-                </div>
-            </div>
 
-            <div class="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-192">
-                @if($item->show_logos)
-                    <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                        <img class="mx-auto" src="{{ asset('assets/images/ets2.png') }}" alt="Euro Truck Simulator 2">
-                    </div>
-                    <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
-                        <img class="mx-auto" src="{{ asset('assets/images/ats.png') }}" alt="American Truck Simulator">
-                    </div>
-                @endif
-            </div>
+                <div class="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-192">
+                    @if($item->show_logos)
+                        <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
+                            <img class="mx-auto" src="{{ asset('assets/images/ets2.png') }}"
+                                 alt="Euro Truck Simulator 2">
+                        </div>
+                        <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8">
+                            <img class="mx-auto" src="{{ asset('assets/images/ats.png') }}"
+                                 alt="American Truck Simulator">
+                        </div>
+                    @endif
+                </div>
+            @endif
         </div>
         <div class="navbar-menu relative z-50" x-show="openNav" x-cloak>
             <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
             <nav @click.away="openNav = false"
-                class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                 class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
                     <div class="mr-auto text-3xl font-semibold leading-none">
                         <h1 class="font-bold">{{ config('app.name') }}</h1>

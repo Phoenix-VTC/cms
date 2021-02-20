@@ -80,6 +80,9 @@ return [
             'journey' => [
                 'component' => 'a17-block-journey',
             ],
+            'image' => [
+                'component' => 'a17-block-image',
+            ],
         ],
         'repeaters' => [
             'statistic' => [
@@ -114,6 +117,14 @@ return [
                 ],
             ],
             'header_image' => [
+                'default' => [
+                    [
+                        'name' => 'default',
+                        'ratio' => 0,
+                    ],
+                ],
+            ],
+            'author_image' => [
                 'default' => [
                     [
                         'name' => 'default',

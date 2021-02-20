@@ -19,9 +19,19 @@ $router
     ->name('home');
 
 $router
+    ->redirect('/{locale}/blog', '/{locale}/blogs');
+
+$router
+    ->get('/{locale}/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'showPage'])
+    ->name('blog.show');
+
+$router
     ->get('/{locale}/{slug}', [\App\Http\Controllers\PageController::class, 'showPage'])
     ->name('page.show');
 
 $router
     ->get('/{locale}/team/{slug}', [\App\Http\Controllers\EmployeeController::class, 'showPage'])
     ->name('employee.show');
+
+$router
+    ->redirect('/en', '/');
