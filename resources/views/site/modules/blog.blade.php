@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-2xl mx-auto leading-loose text-blueGray-400">
+        <div class="mx-auto leading-loose text-blueGray-400">
             {!! $item->renderBlocks(false) !!}
         </div>
     </div>
