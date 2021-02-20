@@ -13,7 +13,6 @@ class CreateBlogsTables extends Migration
 
             $table->integer('position')->unsigned()->nullable();
 
-
             $table->string('author', 200)->nullable();
         });
 
@@ -21,6 +20,7 @@ class CreateBlogsTables extends Migration
             createDefaultTranslationsTableFields($table, 'blog');
             $table->string('title', 200)->nullable();
             $table->text('description')->nullable();
+            $table->string('tag', 20)->nullable();
         });
 
         Schema::create('blog_slugs', function (Blueprint $table) {

@@ -30,7 +30,7 @@ class Blog extends Model
     public $translatedAttributes = [
         'title',
         'description',
-        'active',
+        'tag',
     ];
 
     public $slugAttributes = [
