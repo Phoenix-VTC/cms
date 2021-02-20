@@ -17,7 +17,9 @@
                             {{ $blog->tag }}
                         </span>
                     @endif
-                    <h3 class="my-4 text-xl md:text-2xl font-bold font-heading text-blueGray-100">{{ $blog->title }}</h3>
+                    <a href="{{ route('blog.show', [app()->getLocale(), $blog->slug]) }}">
+                        <h3 class="my-4 text-xl md:text-2xl font-bold font-heading text-blueGray-100">{{ $blog->title }}</h3>
+                    </a>
                     <p class="text-sm md:text-base leading-loose text-blueGray-400">
                         {{ \Illuminate\Support\Str::words($blog->description, 45) }}
                     </p>
@@ -40,9 +42,11 @@
                     </a>
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0 @if($loop->odd) lg:order-1 @endif">
-                    <img class="w-full h-80 object-cover rounded"
-                         src="{{ $blog->image('image') }}"
-                         alt="{{ $blog->imageAltText('image') }}">
+                    <a href="{{ route('blog.show', [app()->getLocale(), $blog->slug]) }}">
+                        <img class="w-full h-80 object-cover rounded"
+                             src="{{ $blog->image('image') }}"
+                             alt="{{ $blog->imageAltText('image') }}">
+                    </a>
                 </div>
             </div>
         @endforeach
