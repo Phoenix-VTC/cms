@@ -36,3 +36,6 @@ $router
 $router
     ->get('/{locale}/team/{slug}', [\App\Http\Controllers\EmployeeController::class, 'showPage'])
     ->name('employee.show');
+
+$router
+    ->redirect('/en', '/');
