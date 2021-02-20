@@ -1,7 +1,7 @@
 @extends('site.app')
 
 @section('navigation')
-    @include('site.partials.navigation')
+    @include('site.partials.navigation', ['enableHeader' => $item->enable_header ?? true])
 @endsection
 
 @section('contents')

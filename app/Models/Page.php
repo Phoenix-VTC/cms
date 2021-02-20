@@ -20,6 +20,7 @@ class Page extends Model implements Sortable
         'published',
         'title',
         'description',
+        'enable_header',
         'header_one',
         'header_two',
         'header_three',
@@ -78,5 +79,10 @@ class Page extends Model implements Sortable
                 ],
             ],
         ],
+    ];
+
+    protected $casts = [
+        'enable_header' => 'boolean',
+        'show_logos' => 'boolean',
     ];
 }
