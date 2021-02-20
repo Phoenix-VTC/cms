@@ -27,6 +27,9 @@ $router
     ->name('blog.show');
 
 $router
+    ->redirect('/{locale}/blogs', '/{locale}/blog');
+
+$router
     ->get('/{locale}/{slug}', [\App\Http\Controllers\PageController::class, 'showPage'])
     ->name('page.show');
 
