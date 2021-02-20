@@ -19,15 +19,11 @@ $router
     ->name('home');
 
 $router
-    ->get('/{locale}/blog', [\App\Http\Controllers\BlogController::class, 'showOverview'])
-    ->name('blog.overview');
+    ->redirect('/{locale}/blog', '/{locale}/blogs');
 
 $router
     ->get('/{locale}/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'showPage'])
     ->name('blog.show');
-
-$router
-    ->redirect('/{locale}/blogs', '/{locale}/blog');
 
 $router
     ->get('/{locale}/{slug}', [\App\Http\Controllers\PageController::class, 'showPage'])
