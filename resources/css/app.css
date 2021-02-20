@@ -18,6 +18,10 @@
     display: none;
 }
 
+.prose {
+    max-width: none;
+}
+
 .prose a {
     color: #f48c06;
 }
