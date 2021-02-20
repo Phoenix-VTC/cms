@@ -5,6 +5,10 @@ return [
         'title' => 'Pages',
         'module' => true
     ],
+    'blogs' => [
+        'title' => 'Blog posts',
+        'module' => true,
+    ],
     'employees' => [
         'title' => 'Employees',
         'module' => true

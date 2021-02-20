@@ -8,6 +8,12 @@
         'maxlength' => 100
     ])
 
+    @formField('checkbox', [
+        'name' => 'enable_header',
+        'label' => 'Enable header',
+        'default' => true,
+    ])
+
     @formField('input', [
         'name' => 'header_one',
         'label' => 'Header one',
