@@ -1,3 +1,7 @@
+@php
+$navItems = \A17\Twill\Models\Feature::forBucket('main_navigation');
+@endphp
+
 <div x-data="{ openNav: false }">
     <section class="pb-8 bg-top bg-cover bg-no-repeat"
              style="background-image: url({{ asset($item->image('header_image')) }}); background-position: 20% 20%;">
@@ -16,7 +20,7 @@
                     </button>
                 </div>
                 <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
-                    @foreach(\A17\Twill\Models\Feature::forBucket('main_navigation') as $navItem)
+                    @foreach($navItems as $navItem)
                         <li>
                             <a class="text-sm text-white hover:text-gray-200"
                                href="{{ route('page.show', [$locale, $navItem->slug]) }}">
@@ -104,7 +108,7 @@
                 </div>
                 <div>
                     <ul>
-                        @foreach(\A17\Twill\Models\Feature::forBucket('main_navigation') as $navItem)
+                        @foreach($navItems as $navItem)
                             <li class="mb-1">
                                 <a
                                     class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600"
