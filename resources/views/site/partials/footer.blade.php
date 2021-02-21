@@ -8,56 +8,56 @@
                     We believe in forward thinking, and strive to put our members first!
                 </p>
                 <div class="flex space-x-6">
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials'))
+                    @if($socials_settings['discord_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('discord_url', 'socials') }}">
+                           href="{{ $socials_settings['discord_url'] }}">
                             <i class="fab fa-discord text-xl"></i>
                         </a>
                     @endif
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('twitter_url', 'socials'))
+                    @if($socials_settings['twitter_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('twitter_url', 'socials') }}">
+                           href="{{ $socials_settings['twitter_url'] }}">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
                     @endif
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('facebook_url', 'socials'))
+                    @if($socials_settings['facebook_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('facebook_url', 'socials') }}">
+                           href="{{ $socials_settings['facebook_url'] }}">
                             <i class="fab fa-facebook text-xl"></i>
                         </a>
                     @endif
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('youtube_url', 'socials'))
+                    @if($socials_settings['youtube_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('youtube_url', 'socials') }}">
+                           href="{{ $socials_settings['youtube_url'] }}">
                             <i class="fab fa-youtube text-xl"></i>
                         </a>
                     @endif
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('instagram_url', 'socials'))
+                    @if($socials_settings['instagram_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('instagram_url', 'socials') }}">
+                           href="{{ $socials_settings['instagram_url'] }}">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
                     @endif
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('steam_url', 'socials'))
+                    @if($socials_settings['steam_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('steam_url', 'socials') }}">
+                           href="{{ $socials_settings['steam_url'] }}">
                             <i class="fab fa-steam text-xl"></i>
                         </a>
                     @endif
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials'))
+                    @if($socials_settings['truckersmp_url'])
                         <a class="text-gray-400 hover:text-gray-300" target="_blank"
-                           href="{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('truckersmp_url', 'socials') }}">
+                           href="{{ $socials_settings['truckersmp_url'] }}">
                             <i class="fas fa-truck text-xl"></i>
                         </a>
                     @endif
                 </div>
                 <div class="flex space-x-6">
-                    @if(app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials'))
+                    @if($socials_settings['support_email'])
                         <p class="text-xs text-gray-400">
                             <span>Get in touch </span>
                             <a class="text-orange-600 hover:text-orange-700 underline"
-                               href="mailto:{{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials') }}">
-                                {{ app(A17\Twill\Repositories\SettingRepository::class)->byKey('support_email', 'socials') }}
+                               href="mailto:{{ $socials_settings['support_email'] }}">
+                                {{ $socials_settings['support_email'] }}
                             </a>
                         </p>
                     @endif
