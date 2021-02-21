@@ -69,6 +69,7 @@ class Blog extends Model
     ];
 
     protected $casts = [
+        'published' => 'boolean',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];

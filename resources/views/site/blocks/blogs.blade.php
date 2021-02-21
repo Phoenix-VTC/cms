@@ -1,7 +1,7 @@
 <?php /** @var A17\Twill\Models\Block $block */ ?>
 
 @php
-    $blogs = App\Models\Blog::latest()->paginate(5);
+    $blogs = App\Models\Blog::where('published', 1)->latest()->paginate(5);
 @endphp
 
 <section class="py-20">
