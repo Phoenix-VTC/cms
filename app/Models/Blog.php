@@ -9,8 +9,10 @@ use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-class Blog extends Model
+class Blog extends Model implements Feedable
 {
     use HasBlocks;
     use HasTranslation;
@@ -73,4 +75,24 @@ class Blog extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+    public function toFeedItem(): FeedItem
+    {
+        return FeedItem::create()
+            ->id($this->id)
+            ->title($this->translation->title)
+            ->summary($this->translation->description ?? '')
+            ->updated($this->created_at)
+            ->link(route('blog.show', [app()->getLocale(), $this->getSlug()]))
+            ->author($this->author ?? '')
+            ->category($this->translation->tag ?? '');
+    }
+
+    public static function getFeedItems()
+    {
+        return self::where('published', 1)
+            ->limit(100)
+            ->latest()
+            ->get();
+    }
 }

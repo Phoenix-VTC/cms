@@ -35,3 +35,5 @@ $router
 
 $router
     ->redirect('/en', '/');
+
+$router->feeds();
