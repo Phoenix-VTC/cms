@@ -9,6 +9,7 @@
     <meta name="description"
           content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('feed::links')
     {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180"
           href="{{ asset('assets/images/branding/favicons/apple-touch-icon.png') }}">
