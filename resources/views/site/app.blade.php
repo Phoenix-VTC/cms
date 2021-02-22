@@ -7,7 +7,7 @@
     <title>{{ $item->title }} - {{ config('app.name') }}</title>
     <meta name="title" content="{{ $item->title }} - {{ config('app.name') }}">
     <meta name="description"
-          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+          content="{{ $item->translation->description ?? 'Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!' }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180"
@@ -23,24 +23,33 @@
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
     <meta name="theme-color" content="#18181B">
     {{-- Open Graph / Facebook Meta Tags --}}
-    <meta property="og:type" content="website">
+    @if($item->author)
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="{{ $item->created_at ?? '' }}">
+        <meta property="article:author" content="{{ $item->author ?? '' }}">
+        <meta property="article:section" content="{{ $item->translation->tag ?? '' }}">
+        <meta property="article:tag" content="{{ $item->translation->tag ?? '' }}">
+        <meta property="profile:username" content="{{ $item->author ?? '' }}">
+    @else
+        <meta property="og:type" content="website">
+    @endif
     <meta property="og:url" content="{{ route('home') }}">
     <meta property="og:title" content="{{ $item->title }} - {{ config('app.name') }}">
     <meta property="og:description"
-          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+          content="{{ $item->translation->description ?? 'Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!' }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:image"
-          content="{{ asset($item->image('header_image')) }}">
+          content="@if($item->hasImage('header_image')){{ asset($item->image('header_image')) }}@elseif($item->hasImage('image')){{ asset($item->image('image')) }}@endif">
     {{-- Twitter Meta Tags --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ route('home') }}">
     <meta property="twitter:title" content="{{ $item->title }} - {{ config('app.name') }}">
     <meta property="twitter:description"
-          content="Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!">
+          content="{{ $item->translation->description ?? 'Phoenix is a brand-new VTC, founded by experienced members of the community. We believe in forward thinking, and strive to put our members first!' }}">
     <meta property="twitter:site" content="@PhoenixVTC">
     <meta property="twitter:creator" content="@PhoenixVTC">
     <meta property="twitter:image"
-          content="{{ asset($item->image('header_image')) }}">
+          content="@if($item->hasImage('header_image')){{ asset($item->image('header_image')) }}@elseif($item->hasImage('image')){{ asset($item->image('image')) }}@endif">
     {{-- Stylesheets and Scripts --}}
     <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
