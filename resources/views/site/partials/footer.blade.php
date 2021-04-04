@@ -78,7 +78,7 @@
                             </li>
 
                             <li>
-                                <a href="{{ url("$locale/events") }}" class="text-base text-gray-300 hover:text-white">
+                                <a href="https://events.phoenixvtc.com" class="text-base text-gray-300 hover:text-white">
                                     Events
                                 </a>
                             </li>
@@ -102,14 +102,14 @@
                             </li>
 
                             <li>
-                                <a href="{{ url("$locale/report-a-driver") }}"
+                                <a href="mailto:management@phoenixvtc.com"
                                    class="text-base text-gray-300 hover:text-white">
                                     Report a Driver
                                 </a>
                             </li>
 
                             <li>
-                                <a href="{{ url("$locale/event-invitations") }}"
+                                <a href="mailto:events@phoenixvtc.com"
                                    class="text-base text-gray-300 hover:text-white">
                                     Event Invitations
                                 </a>
